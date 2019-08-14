@@ -1,5 +1,10 @@
 terragrunt = {
   terraform {
-    source = "git::git@github.com:foo/modules.git//app?ref=v0.0.3"
+    source = "git::https://github.com/harishdharmavaram/Modules.git/resourcegroup"
   }
 }
+
+  # Include all settings from the root terraform.tfvars file
+  include = {
+    path = "${find_in_parent_folders()}"
+  }
