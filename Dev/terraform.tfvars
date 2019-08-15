@@ -1,10 +1,11 @@
-provider "azurerm" {
-}
-terraform {
-  backend "azurerm" {
-    storage_account_name  = "jdateststrg"
-	resource_group_name   = "terraform-rg"
-    container_name        = "terragruntversion"
-    key                   = "terraform.tfstate"
+terragrunt = {
+  remote_state {
+    backend = "azurerm"
+
+    config {
+      resource_group_name  = "terraform-rg"
+      storage_account_name = "jdateststrg"
+      container_name       = "terragruntversion"
+      key                  = "staging/east-us/terraform.tfstate"
+    }
   }
-}
