@@ -1,6 +1,6 @@
 terragrunt = {
   terraform {
-    source = "git::https://github.com/harishdharmavaram/Modules.git/resourcegroup"
+    source = "git::https://github.com/harishdharmavaram/Modules.git?ref=3dd415f"
   }
 }
 
